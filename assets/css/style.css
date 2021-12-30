@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
 /* ------------------------------------------- Homepage */ 
 
 #home {
@@ -21,6 +26,19 @@
 }
 
 #container img {
-    width: 10%;
+    width: 16%;
     height: auto;
+    margin-bottom: 2rem;
+}
+
+.button {
+    font-size: 2rem;
+    padding: 2rem 0;
+    width: 20rem;
+    margin: 0.4rem 0;
+    text-align: center;
+    background-color: #125eaa;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
 }
