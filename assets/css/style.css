@@ -15,7 +15,7 @@ h1 {
     color: #125eaa;
 }
 
-/* ------------------------------------------- Homepage */ 
+/* ------------------------------------------- Homepage */
 
 #home {
     height: 100vh;
@@ -33,7 +33,7 @@ h1 {
     padding: 2rem;
 }
 
-#container img {
+#badge {
     width: 16%;
     height: auto;
     margin-bottom: 2rem;
@@ -56,3 +56,5 @@ h1 {
     transition: 200ms;
     transform: scale(1.02);
 }
+
+/* ------------------------------------------- Quiz Page */
