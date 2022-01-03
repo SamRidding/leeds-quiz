@@ -89,3 +89,33 @@ h1 {
 .options p {
     padding: 0.8rem;
 }
+
+.options:hover {
+    color: #FFF300;
+    transition: 200ms;
+}
+
+#progress {
+    margin-top: 2rem;
+}
+
+#progress h2 {
+    font-size: 2.8rem;
+    color: #125eaa;
+    text-align: center;
+}
+
+#progressBar {
+    height: 2rem;
+    width: 20rem;
+    border: 0.32rem solid #125eaa;
+    border-radius: 14px;
+    margin-top: 0.8rem;
+    overflow: hidden;
+}
+
+#barProgress {
+    height: 100%;
+    width: 0%;
+    background: #FFF300;
+}
