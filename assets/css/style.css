@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium&family=Ubuntu&display=swap');
 
 * {
     padding: 0;
@@ -40,7 +40,7 @@ h1 {
 #badge {
     width: 16%;
     height: auto;
-    margin-bottom: 2rem;
+    margin: 2rem;
 }
 
 .button {
@@ -62,6 +62,30 @@ h1 {
 }
 
 /* ------------------------------------------- Quiz Page */
+
+.head {
+    max-width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#score-display {
+    padding: 2rem;
+    text-align: center;
+}
+
+.score-text {
+    font-size: 2.8rem;
+    color: #125eaa;
+    font-family: 'Oxanium', cursive;
+}
+
+#score {
+    color: #125eaa;
+    font-size: 6rem;
+    font-family: 'Oxanium', cursive;
+}
 
 #question {
     text-align: center;
@@ -103,6 +127,7 @@ h1 {
     font-size: 2.8rem;
     color: #125eaa;
     text-align: center;
+    font-family: 'Oxanium', cursive;
 }
 
 #progressBar {
