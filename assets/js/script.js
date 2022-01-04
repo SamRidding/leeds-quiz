@@ -14,7 +14,11 @@ let currentQuestion;
 let questionsAnswered;
 let availableQuestions;
 
-
+/* Add event listener to check DOM content has loaded before quiz starts */
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOMContentLoaded');
+    runGame();        
+})
 
 
 
