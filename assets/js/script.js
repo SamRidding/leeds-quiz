@@ -9,7 +9,6 @@ const barProgress = document.getElementById('barProgress');
 const points = 1
 const totalQuestions = 10
 let score = 0
-let questionPool;
 let currentQuestion;
 let questionsAnswered;
 let availableQuestions;
@@ -107,7 +106,9 @@ let questions = [
 /* Function to randomise the question order before quiz starts */
 
 function randomiseQuestions() {
-    
+    let questionPool = questions.length;
+    let random = Math.floor(Math.random() * questionPool);
+    currentQuestion = questions[`${random}`];
 }
 
 function fillQuestions() {
@@ -123,7 +124,7 @@ function nextQuestion() {
 }
 
 function runGame() {
-    
+    randomiseQuestions()
 }
 
 
