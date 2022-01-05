@@ -128,6 +128,7 @@ function fillQuestions() {
 }
 
 function checkAnswer() {
+    
 
 }
 
