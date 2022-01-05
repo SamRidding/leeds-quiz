@@ -112,7 +112,19 @@ function randomiseQuestions() {
 }
 
 function fillQuestions() {
-    
+    question.innerText = currentQuestion.question;
+
+    let opt1 = document.getElementById('opt1');
+    opt1.innerText = currentQuestion.option1;
+
+    let opt2 = document.getElementById('opt2');
+    opt2.innerText = currentQuestion.option2;
+
+    let opt3 = document.getElementById('opt3');
+    opt3.innerText = currentQuestion.option3;
+
+    let opt4 = document.getElementById('opt4');
+    opt4.innerText = currentQuestion.option4;
 }
 
 function checkAnswer() {
@@ -125,6 +137,7 @@ function nextQuestion() {
 
 function runGame() {
     randomiseQuestions()
+    fillQuestions()
 }
 
 
