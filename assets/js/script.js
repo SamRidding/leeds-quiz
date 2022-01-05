@@ -110,7 +110,21 @@ function randomiseQuestions() {
     
 }
 
-function 
+function fillQuestions() {
+
+}
+
+function checkAnswer() {
+
+}
+
+function nextQuestion() {
+
+}
+
+function runGame() {
+    
+}
 
 
 
