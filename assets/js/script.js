@@ -16,8 +16,7 @@ let availableQuestions;
 
 /* Add event listener to check DOM content has loaded before quiz starts */
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOMContentLoaded');
-    runGame();        
+    runGame();     
 })
 
 /* Quiz Questions */
@@ -104,6 +103,16 @@ let questions = [
     },
 
 ]
+
+/* Function to randomise the question order before quiz starts */
+
+function randomiseQuestions() {
+    
+}
+
+function 
+
+
 
 
 
