@@ -1,7 +1,7 @@
 /* Quiz Progress Variables */
 const question = document.getElementById('question');
 const options = document.getElementsByClassName('option');
-const progressValue = document.getElementById('questionValue');
+const progressValue = document.getElementById('progressValue');
 const scoreValue = document.getElementById('score');
 const barProgress = document.getElementById('barProgress');
 
@@ -9,7 +9,7 @@ const barProgress = document.getElementById('barProgress');
 const points = 1
 const totalQuestions = 10
 let currentQuestion;
-let questionsAnswered;
+let questionNumber;
 let availableQuestions;
 
 /* Add event listener to check DOM content has loaded before quiz starts */
@@ -107,6 +107,12 @@ function incrementScore() {
     scoreValue.innerText = score;
 }
 
+function quizProgress() {
+    questionNumber++;
+    progressValue.innerText = `${questionNumber} / 10`;
+
+}
+
 /* Function to check whether the answer is correct or incorrect */
 
 function checkAnswer() {
@@ -114,6 +120,7 @@ function checkAnswer() {
     for (let option of options) {
         option.addEventListener('click', function(){
             if (this.children[1].innerText == currentAnswer) {
+                quizProgress();
                 incrementScore();
             } else {
                 alert('incorrect');
@@ -154,7 +161,7 @@ function nextQuestion() {
 
 function runGame() {
     score = 0;
-    questionsAnswered = 0;
+    questionNumber = 1;
     randomiseQuestions();
     fillQuestions();
 }
