@@ -8,7 +8,6 @@ const barProgress = document.getElementById('barProgress');
 /* Score & Question Variables */
 const points = 1
 const totalQuestions = 10
-let score = 0
 let currentQuestion;
 let questionsAnswered;
 let availableQuestions;
@@ -103,6 +102,15 @@ let questions = [
 
 ]
 
+function incrementScore() {
+    scoreValue.innerText = score;
+    score++;
+}
+
+function incrementProgress() {
+    
+}
+
 /* Function to check whether the answer is correct or incorrect */
 
 function checkAnswer() {
@@ -110,7 +118,7 @@ function checkAnswer() {
     for (let option of options) {
         option.addEventListener('click', function(){
             if (this.children[1].innerText == currentAnswer) {
-                alert('correct');
+                incrementScore();
             } else {
                 alert('incorrect');
             }
@@ -149,6 +157,8 @@ function nextQuestion() {
 }
 
 function runGame() {
+    score = 0
+
     randomiseQuestions();
     fillQuestions();
 }
