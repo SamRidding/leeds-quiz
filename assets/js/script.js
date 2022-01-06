@@ -103,12 +103,12 @@ let questions = [
 ]
 
 function incrementScore() {
-    scoreValue.innerText = score;
     score++;
+    scoreValue.innerText = score;
 }
 
-function incrementProgress() {
-    
+function quizProgress() {
+
 }
 
 /* Function to check whether the answer is correct or incorrect */
