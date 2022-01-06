@@ -9,6 +9,7 @@ const barProgress = document.getElementById('barProgress');
 const points = 1;
 const totalQuestions = 10;
 let currentQuestion;
+let currentAnswer;
 let questionNumber;
 let availableQuestions;
 
@@ -102,33 +103,6 @@ let questions = [
 
 ]
 
-function incrementScore() {
-    score++;
-    scoreValue.innerText = score;
-}
-
-function quizProgress() {
-    questionNumber++;
-    progressValue.innerText = `${questionNumber} / 10`;
-}
-
-/* Function to check whether the answer is correct or incorrect */
-
-function checkAnswer() {
-    let currentAnswer = currentQuestion.answer
-    for (let option of options) {
-        option.addEventListener('click', function(){
-            if (this.children[1].innerText == currentAnswer) {
-                quizProgress();
-                incrementScore();
-            } else {
-                quizProgress();
-            }
-            nextQuestion();
-        })
-    }
-}
-
 /* Function to randomise the question order before quiz starts */
 
 function randomiseQuestions() {
@@ -152,16 +126,41 @@ function fillQuestions() {
     let opt4 = document.getElementById('opt4');
     opt4.innerText = currentQuestion.option4;
 
+}
 
+function incrementScore() {
+    score++;
+    scoreValue.innerText = score;
+}
+
+function quizProgress() {
+    questionNumber++;
+    progressValue.innerText = `${questionNumber} / 10`;
+}
+
+/* Function to check whether the answer is correct or incorrect */
+
+function checkAnswer() {
+    for (let option of options) {
+        option.addEventListener('click', function(){
+            currentAnswer = currentQuestion.answer;
+            if (this.children[1].innerText == currentAnswer) {
+                quizProgress();
+                incrementScore();
+            } else {
+                quizProgress();
+            }
+            nextQuestion();
+        })
+    }
 }
 
 function nextQuestion() {
     if (questionNumber < totalQuestions) {
         removeQuestion();
-        console.log(questions);
         randomiseQuestions();
         fillQuestions();
-    } else {
+    } else if (questionNumber == totalQuestions) {
         console.log('End Of Quiz')
     }
 }
@@ -169,6 +168,8 @@ function nextQuestion() {
 function removeQuestion() {
     let removeQ = questions.indexOf(currentQuestion);
     questions.splice(removeQ,1);
+
+    currentAnswer = "";
 }
 
 function runGame() {
