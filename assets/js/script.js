@@ -1,7 +1,7 @@
 /* Quiz Progress Variables */
 const question = document.getElementById('question');
 const options = document.getElementsByClassName('option');
-const questionValue = document.getElementById('questionValue');
+const progressValue = document.getElementById('questionValue');
 const scoreValue = document.getElementById('score');
 const barProgress = document.getElementById('barProgress');
 
@@ -107,10 +107,6 @@ function incrementScore() {
     scoreValue.innerText = score;
 }
 
-function quizProgress() {
-
-}
-
 /* Function to check whether the answer is correct or incorrect */
 
 function checkAnswer() {
@@ -157,8 +153,8 @@ function nextQuestion() {
 }
 
 function runGame() {
-    score = 0
-
+    score = 0;
+    questionsAnswered = 0;
     randomiseQuestions();
     fillQuestions();
 }
