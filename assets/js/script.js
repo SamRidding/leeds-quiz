@@ -6,8 +6,8 @@ const scoreValue = document.getElementById('score');
 const barProgress = document.getElementById('barProgress');
 
 /* Score & Question Variables */
-const points = 1
-const totalQuestions = 10
+const points = 1;
+const totalQuestions = 10;
 let currentQuestion;
 let questionNumber;
 let availableQuestions;
@@ -110,7 +110,6 @@ function incrementScore() {
 function quizProgress() {
     questionNumber++;
     progressValue.innerText = `${questionNumber} / 10`;
-
 }
 
 /* Function to check whether the answer is correct or incorrect */
@@ -123,8 +122,9 @@ function checkAnswer() {
                 quizProgress();
                 incrementScore();
             } else {
-                alert('incorrect');
+                quizProgress();
             }
+            nextQuestion();
         })
     }
 }
@@ -152,11 +152,23 @@ function fillQuestions() {
     let opt4 = document.getElementById('opt4');
     opt4.innerText = currentQuestion.option4;
 
-    checkAnswer();
+
 }
 
 function nextQuestion() {
+    if (questionNumber < totalQuestions) {
+        removeQuestion();
+        console.log(questions);
+        randomiseQuestions();
+        fillQuestions();
+    } else {
+        console.log('End Of Quiz')
+    }
+}
 
+function removeQuestion() {
+    let removeQ = questions.indexOf(currentQuestion);
+    questions.splice(removeQ,1);
 }
 
 function runGame() {
@@ -164,6 +176,7 @@ function runGame() {
     questionNumber = 1;
     randomiseQuestions();
     fillQuestions();
+    checkAnswer();
 }
 
 
