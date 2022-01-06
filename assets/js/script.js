@@ -1,6 +1,6 @@
 /* Quiz Progress Variables */
 const question = document.getElementById('question');
-const options = document.getElementsByClassName('option-text');
+const options = document.getElementsByClassName('option');
 const questionValue = document.getElementById('questionValue');
 const scoreValue = document.getElementById('score');
 const barProgress = document.getElementById('barProgress');
@@ -26,7 +26,7 @@ let questions = [
         option2: 'Alan Smith',
         option3: 'Harry Kewell',
         option4: 'Aaron Lennon',
-        answer: 4,
+        answer: 'Aaron Lennon',
     },
     {
         question: 'Which club did Leeds sign striker Luciano Becchio from?',
@@ -34,7 +34,7 @@ let questions = [
         option2: 'Marino',
         option3: 'Mérida',
         option4: 'Talavera',
-        answer: 3,
+        answer: 'Mérida',
     },
     {
         question: 'In what season did Leeds win the FA Cup?',
@@ -42,7 +42,7 @@ let questions = [
         option2: '1971/72',
         option3: '1969/70',
         option4: '1976/77',
-        answer: 2,
+        answer: '1971/72',
     },
     {
         question: 'Who knocked Leeds out of the Champions League in the 2001 Semi-finals?',
@@ -50,7 +50,7 @@ let questions = [
         option2: 'Bayern Munich',
         option3: 'Valencia',
         option4: 'Lyon',
-        answer: 3,
+        answer: 'Valencia',
     },
     {
         question: 'What shirt number did Pablo Hernandez wear for Leeds?',
@@ -58,7 +58,7 @@ let questions = [
         option2: '23',
         option3: '7',
         option4: '15',
-        answer: 1,
+        answer: '19',
     },
     {
         question: 'Who was captain for Leeds in the 2015/16 season?',
@@ -66,7 +66,7 @@ let questions = [
         option2: 'Sol Bamba',
         option3: 'Liam Bridcutt',
         option4: 'Souleymane Doukara',
-        answer: 3,
+        answer: 'Liam Bridcutt',
     },
     {
         question: 'Who has had the most appearances in the Premier League for Leeds?',
@@ -74,7 +74,7 @@ let questions = [
         option2: 'Garry Kelly',
         option3: 'Ian Harte',
         option4: 'Nigel Martyn',
-        answer: 2,
+        answer: 'Garry Kelly',
     },
     {
         question: 'How many goals did Patrick Bamford score for Leeds in the 2020/21 season?',
@@ -82,7 +82,7 @@ let questions = [
         option2: '19',
         option3: '16',
         option4: '17',
-        answer: 4,
+        answer: '17',
     },
     {
         question: 'In what year did Leeds reach the European Cup Final?',
@@ -90,7 +90,7 @@ let questions = [
         option2: '1972',
         option3: '1978',
         option4: '1980',
-        answer: 1,
+        answer: '1975',
     },
     {
         question: 'In what year did Leeds sign Jermaine Beckford?',
@@ -98,12 +98,26 @@ let questions = [
         option2: '2005',
         option3: '2006',
         option4: '2007',
-        answer: 3,
+        answer: '2006',
     },
 
 ]
 
 /* Function to randomise the question order before quiz starts */
+
+function checkAnswer() {
+    let currentAnswer = currentQuestion.answer
+    for (let option of options) {
+        option.addEventListener('click', function(){
+            console.log(this.innerText)
+            if (this.children.innerText == currentAnswer) {
+                alert('correct');
+            } else {
+                alert('incorrect');
+            }
+        })
+    }
+}
 
 function randomiseQuestions() {
     let questionPool = questions.length;
@@ -125,11 +139,8 @@ function fillQuestions() {
 
     let opt4 = document.getElementById('opt4');
     opt4.innerText = currentQuestion.option4;
-}
 
-function checkAnswer() {
-    
-
+    checkAnswer();
 }
 
 function nextQuestion() {
@@ -137,8 +148,8 @@ function nextQuestion() {
 }
 
 function runGame() {
-    randomiseQuestions()
-    fillQuestions()
+    randomiseQuestions();
+    fillQuestions();
 }
 
 
