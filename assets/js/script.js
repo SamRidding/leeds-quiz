@@ -103,14 +103,13 @@ let questions = [
 
 ]
 
-/* Function to randomise the question order before quiz starts */
+/* Function to check whether the answer is correct or incorrect */
 
 function checkAnswer() {
     let currentAnswer = currentQuestion.answer
     for (let option of options) {
         option.addEventListener('click', function(){
-            console.log(this.innerText)
-            if (this.children.innerText == currentAnswer) {
+            if (this.children[1].innerText == currentAnswer) {
                 alert('correct');
             } else {
                 alert('incorrect');
@@ -118,6 +117,8 @@ function checkAnswer() {
         })
     }
 }
+
+/* Function to randomise the question order before quiz starts */
 
 function randomiseQuestions() {
     let questionPool = questions.length;
