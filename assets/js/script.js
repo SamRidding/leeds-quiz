@@ -156,11 +156,11 @@ function checkAnswer() {
 }
 
 function nextQuestion() {
-    if (questionNumber < totalQuestions) {
+    if (questionNumber <= totalQuestions) {
         removeQuestion();
         randomiseQuestions();
         fillQuestions();
-    } else if (questionNumber == totalQuestions) {
+    } else if (questionNumber > totalQuestions) {
         console.log('End Of Quiz')
     }
 }
