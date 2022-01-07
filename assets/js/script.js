@@ -4,6 +4,7 @@ const options = document.getElementsByClassName('option');
 const progressValue = document.getElementById('progressValue');
 const scoreValue = document.getElementById('score');
 const barProgress = document.getElementById('barProgress');
+const answerFeedback = document.getElementById('answer-feedback');
 
 /* Score & Question Variables */
 const points = 1;
@@ -143,14 +144,17 @@ function quizProgress() {
 function checkAnswer() {
     for (let option of options) {
         option.addEventListener('click', function(){
+
             currentAnswer = currentQuestion.answer;
             if (this.children[1].innerText == currentAnswer) {
-                quizProgress();
-                incrementScore();
+                setTimeout(quizProgress,2000);
+                setTimeout(incrementScore,2000);
+                answerFeedback.style.display = 'block';
+                progressValue.style.display = 'none';
             } else {
-                quizProgress();
+                setTimeout(quizProgress,2000);
             }
-            nextQuestion();
+            setTimeout(nextQuestion,2000);
         })
     }
 }
@@ -170,6 +174,10 @@ function removeQuestion() {
     questions.splice(removeQ,1);
 
     currentAnswer = "";
+
+    answerFeedback.style.display = 'none';
+
+    progressValue.style.display = ''
 }
 
 function runGame() {
