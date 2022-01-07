@@ -149,14 +149,18 @@ function checkAnswer() {
             if (this.children[1].innerText == currentAnswer) {
                 setTimeout(quizProgress,2000);
                 setTimeout(incrementScore,2000);
-                answerFeedback.style.display = 'block';
-                progressValue.style.display = 'none';
+                displayFeedback();
             } else {
                 setTimeout(quizProgress,2000);
             }
             setTimeout(nextQuestion,2000);
         })
     }
+}
+
+function displayFeedback() {
+    answerFeedback.style.display = 'block';
+    progressValue.style.display = 'none';
 }
 
 function nextQuestion() {
