@@ -144,17 +144,20 @@ function quizProgress() {
 function checkAnswer() {
     for (let option of options) {
         option.addEventListener('click', function(){
-
             currentAnswer = currentQuestion.answer;
             if (this.children[1].innerText == currentAnswer) {
+                console.log(currentAnswer);
+                answerFeedback.innerText = `CORRECT`;
                 setTimeout(quizProgress,2000);
                 setTimeout(incrementScore,2000);
-                displayFeedback();
             } else {
+                console.log(currentAnswer);
+                answerFeedback.innerText = `CORRECT ANSWER: ${currentAnswer}`;
                 setTimeout(quizProgress,2000);
             }
+            displayFeedback();    
             setTimeout(nextQuestion,2000);
-        })
+        });
     }
 }
 
@@ -182,6 +185,8 @@ function removeQuestion() {
     answerFeedback.style.display = 'none';
 
     progressValue.style.display = ''
+
+    answerFeedback.innerText = ``;
 }
 
 function runGame() {
