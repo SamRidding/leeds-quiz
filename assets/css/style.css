@@ -130,17 +130,3 @@ h1 {
     font-family: 'Oxanium', cursive;
 }
 
-#progressBar {
-    height: 2rem;
-    width: 20rem;
-    border: 0.32rem solid #125eaa;
-    border-radius: 14px;
-    margin-top: 0.8rem;
-    overflow: hidden;
-}
-
-#barProgress {
-    height: 100%;
-    width: 0%;
-    background: #FFF300;
-}
