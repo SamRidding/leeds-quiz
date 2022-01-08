@@ -132,6 +132,7 @@ function fillQuestions() {
 function incrementScore() {
     score++;
     scoreValue.innerText = score;
+    
 }
 
 function quizProgress() {
