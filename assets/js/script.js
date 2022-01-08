@@ -172,7 +172,7 @@ function nextQuestion() {
         randomiseQuestions();
         fillQuestions();
     } else if (questionNumber > totalQuestions) {
-        console.log('End Of Quiz')
+        window.location = ('./scorepage.html');
     }
 }
 
