@@ -237,7 +237,7 @@ function quizProgress() {
 
 /**
  * Removes the current question from the questions array and resets
- * relavant variables for the next iteration/question
+ * relavant variables/styling for the next iteration/question
  */
  function removeQuestion() {
     let removeQ = questions.indexOf(currentQuestion); //
