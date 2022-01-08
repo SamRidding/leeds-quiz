@@ -190,6 +190,7 @@ function removeQuestion() {
 }
 
 function runGame() {
+    localStorage.clear();
     score = 0;
     questionNumber = 1;
     randomiseQuestions();
