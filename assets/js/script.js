@@ -7,8 +7,8 @@ const barProgress = document.getElementById('barProgress');
 const answerFeedback = document.getElementById('answer-feedback');
 
 /* Score & Question Variables */
-const points = 1;
 const totalQuestions = 10;
+let score = 0
 let currentQuestion;
 let currentAnswer;
 let questionNumber;
@@ -132,7 +132,6 @@ function fillQuestions() {
 function incrementScore() {
     score++;
     scoreValue.innerText = score;
-
 }
 
 function quizProgress() {
@@ -200,5 +199,5 @@ function runGame() {
 
 function scorePage() {
     window.location = ('./scorepage.html');
-
+    localStorage.setItem('finalScore', score);
 }
