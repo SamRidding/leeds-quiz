@@ -131,12 +131,20 @@ h1 {
     display: none;
 }
 
+#final-score {
+    margin: 2rem 1rem 0 1rem;
+}
+
+#finish-quote {
+    margin: 2rem 1rem;
+}
+
 /* ------------------------------------------- Phone Screens */
 
 @media only screen and (max-width: 480px) {
     h1 {
         font-size: 2.4rem;
-        margin-bottom: 0;
+        margin: 2rem 1rem;
     }
 
     /* Home Screen */
@@ -176,7 +184,7 @@ h1 {
 
     #question {
         font-size: 2rem;
-        padding: 1rem;
+        margin: 1rem;
     }
 
     #option-container {
