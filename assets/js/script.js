@@ -146,13 +146,13 @@ function checkAnswer() {
         option.addEventListener('click', function(){
             currentAnswer = currentQuestion.answer;
             if (this.children[1].innerText == currentAnswer) {
-                console.log(currentAnswer);
                 answerFeedback.innerText = `CORRECT`;
+                answerFeedback.style.color = '#FFF300';
                 setTimeout(quizProgress,2000);
                 setTimeout(incrementScore,2000);
             } else {
-                console.log(currentAnswer);
                 answerFeedback.innerText = `CORRECT ANSWER: ${currentAnswer}`;
+                answerFeedback.style.color = '#125eaa';
                 setTimeout(quizProgress,2000);
             }
             displayFeedback();    
