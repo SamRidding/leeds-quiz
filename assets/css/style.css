@@ -137,6 +137,9 @@ h1 {
 
 #finish-quote {
     margin: 2rem 1rem;
+    text-align: center;
+    color: #125eaa;
+    font-size: 2rem;
 }
 
 /* ------------------------------------------- Phone Screens */

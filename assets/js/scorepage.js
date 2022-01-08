@@ -16,6 +16,6 @@ if (finalScore <= 5) {
 } else if (finalScore <= 19) {
     endQuote.innerText = "Like Lord Bamford silencing the haters, exceptional perfomance";
 } else if (finalScore == 20) {
-    endQuote.innerText = "God like knowledge, Marcelo would be proud!";
+    endQuote.innerText = "Bielsa level knowledge, we are not worthy";
 }
 
