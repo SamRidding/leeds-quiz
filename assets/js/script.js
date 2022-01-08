@@ -132,7 +132,7 @@ function fillQuestions() {
 function incrementScore() {
     score++;
     scoreValue.innerText = score;
-    
+
 }
 
 function quizProgress() {
@@ -173,7 +173,7 @@ function nextQuestion() {
         randomiseQuestions();
         fillQuestions();
     } else if (questionNumber > totalQuestions) {
-        window.location = ('./scorepage.html');
+        scorePage();
     }
 }
 
@@ -196,6 +196,10 @@ function runGame() {
     randomiseQuestions();
     fillQuestions();
     checkAnswer();
+}
+
+function scorePage() {
+    window.location = ('./scorepage.html');
 }
 
 
