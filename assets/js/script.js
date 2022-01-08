@@ -227,6 +227,55 @@ function quizProgress() {
 }
 
 /**
+ * Hides the quiz progress element and displays the user feedback element
+ * so the user can see if they answered correctly and if not what the correct answer was
+ */
+ function displayFeedback() {
+    answerFeedback.style.display = 'block';
+    progressValue.style.display = 'none';
+}
+
+/**
+ * Removes the current question from the questions array and resets
+ * relavant variables for the next question
+ */
+ function removeQuestion() {
+    let removeQ = questions.indexOf(currentQuestion);
+    questions.splice(removeQ,1);
+
+    currentAnswer = "";
+
+    answerFeedback.style.display = 'none';
+
+    progressValue.style.display = ''
+
+    answerFeedback.innerText = ``;
+}
+
+/**
+ * Takes the user to the score page once they have answered all questions
+ * and saves their final score 
+ */
+ function scorePage() {
+    window.location = ('./scorepage.html');
+    localStorage.setItem('finalScore', score);
+}
+
+/**
+ * Compares the question number to the total questions and calls functions to display the next
+ * question or end the quiz and move to the score page
+ */
+ function nextQuestion() {
+    if (questionNumber <= totalQuestions) {
+        removeQuestion();
+        randomiseQuestions();
+        fillQuestions();
+    } else if (questionNumber > totalQuestions) {
+        scorePage();
+    }
+}
+
+/**
  * Listens for user clicks on each of the four options displayed
  * and then calls the appropriate functions if the users choice was correct
  * or incorrect
@@ -252,46 +301,6 @@ function checkAnswer() {
 }
 
 /**
- * Hides the quiz progress element and displays the user feedback element
- * so the user can see if they answered correctly and if not what the correct answer was
- */
-function displayFeedback() {
-    answerFeedback.style.display = 'block';
-    progressValue.style.display = 'none';
-}
-
-/**
- * Compares the question number to the total questions and calls functions to display the next
- * question or end the quiz and move to the score page
- */
-function nextQuestion() {
-    if (questionNumber <= totalQuestions) {
-        removeQuestion();
-        randomiseQuestions();
-        fillQuestions();
-    } else if (questionNumber > totalQuestions) {
-        scorePage();
-    }
-}
-
-/**
- * Removes the current question from the questions array and resets
- * relavant variables for the next question
- */
-function removeQuestion() {
-    let removeQ = questions.indexOf(currentQuestion);
-    questions.splice(removeQ,1);
-
-    currentAnswer = "";
-
-    answerFeedback.style.display = 'none';
-
-    progressValue.style.display = ''
-
-    answerFeedback.innerText = ``;
-}
-
-/**
  * Starts the game by resetting the score and question number and
  * then starts the loop of displaying new questions to the user
  */
@@ -302,13 +311,4 @@ function runGame() {
     randomiseQuestions();
     fillQuestions();
     checkAnswer();
-}
-
-/**
- * Takes the user to the score page once they have answered all questions
- * and saves their final score 
- */
-function scorePage() {
-    window.location = ('./scorepage.html');
-    localStorage.setItem('finalScore', score);
 }
