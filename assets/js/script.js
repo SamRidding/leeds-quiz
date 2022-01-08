@@ -200,14 +200,5 @@ function runGame() {
 
 function scorePage() {
     window.location = ('./scorepage.html');
+
 }
-
-
-
-
-
-
-
-
-
-
