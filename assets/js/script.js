@@ -7,7 +7,7 @@ const barProgress = document.getElementById('barProgress');
 const answerFeedback = document.getElementById('answer-feedback');
 
 /* Score & Question Variables */
-const totalQuestions = 10;
+const totalQuestions = 20;
 let score = 0
 let currentQuestion;
 let currentAnswer;
@@ -101,7 +101,86 @@ let questions = [
         option4: '2007',
         answer: '2006',
     },
-
+    {
+        question: 'How many days was Darko Milanić manager of Leeds?',
+        option1: '24',
+        option2: '32',
+        option3: '43',
+        option4: '50',
+        answer: '32',
+    },
+    {
+        question: 'The last time Leeds made it past the 5th round of the FA cup was the 1997/98 season, who knocked them out?',
+        option1: 'Coventry',
+        option2: 'Arsenal',
+        option3: 'Wolves',
+        option4: 'Liverpool',
+        answer: 'Wolves',
+    },
+    {
+        question: 'How many points did Leeds get in their 2019/20 promotion season from the Championship?',
+        option1: '90',
+        option2: '88',
+        option3: '95',
+        option4: '93',
+        answer: '93',
+    },
+    {
+        question: 'What number shirt did former owner Massimo Cellino retire due to his superstition that the number is unlucky?',
+        option1: '12',
+        option2: '28',
+        option3: '17',
+        option4: '33',
+        answer: '17',
+    },
+    {
+        question: 'Who has scored the most league goals in a season for Leeds since 2000?',
+        option1: 'Jermaine Beckford',
+        option2: 'Chris Wood',
+        option3: 'Ross McCormack',
+        option4: 'Mark Viduka',
+        answer: 'Ross McCormack',
+    },
+    {
+        question: 'Who did Leeds beat to reach the Play-off final in the 2007/8 season?',
+        option1: 'Carlisle',
+        option2: 'Southend',
+        option3: 'Millwall',
+        option4: 'Scunthorpe',
+        answer: 'Carlisle',
+    },
+    {
+        question: 'Who was Leeds shirt sponsor in their promotion season from League 1 in 2009/10?',
+        option1: 'Bet 24',
+        option2: 'RedKite',
+        option3: 'NetFlights',
+        option4: 'Enterprise Insurance',
+        answer: 'NetFlights',
+    },
+    {
+        question: 'Who scored the winner in Leeds 4-3 come back victory over Southampton in 2005?',
+        option1: 'David Healy',
+        option2: 'Rob Blake',
+        option3: 'Liam Miller',
+        option4: 'Paul Butler',
+        answer: 'Liam Miller',
+    },
+    {
+        question: 'How much did it cost Andrea Radrizzani to buy back Elland Road?',
+        option1: '20M',
+        option2: '15M',
+        option3: '25M',
+        option4: '30M',
+        answer: '20M',
+    },
+    {
+        question: 'Which team sealed Leeds relegation from the Premier League in 2003/4?',
+        option1: 'Birmingham',
+        option2: 'Bolton',
+        option3: 'Charlton',
+        option4: 'Blackburn',
+        answer: 'Bolton',
+    },
 ]
 
 /* Function to randomise the question order before quiz starts */
@@ -136,7 +215,7 @@ function incrementScore() {
 
 function quizProgress() {
     questionNumber++;
-    progressValue.innerText = `${questionNumber} / 10`;
+    progressValue.innerText = `${questionNumber} / 20`;
 }
 
 /* Function to check whether the answer is correct or incorrect */
