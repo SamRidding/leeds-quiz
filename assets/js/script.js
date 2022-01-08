@@ -148,15 +148,15 @@ function checkAnswer() {
             if (this.children[1].innerText == currentAnswer) {
                 answerFeedback.innerText = `CORRECT`;
                 answerFeedback.style.color = '#FFF300';
-                setTimeout(quizProgress,2000);
-                setTimeout(incrementScore,2000);
+                setTimeout(quizProgress,1500);
+                setTimeout(incrementScore,1500);
             } else {
                 answerFeedback.innerText = `CORRECT ANSWER: ${currentAnswer}`;
                 answerFeedback.style.color = '#125eaa';
-                setTimeout(quizProgress,2000);
+                setTimeout(quizProgress,1500);
             }
             displayFeedback();    
-            setTimeout(nextQuestion,2000);
+            setTimeout(nextQuestion,1500);
         });
     }
 }
