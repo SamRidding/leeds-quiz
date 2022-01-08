@@ -184,9 +184,9 @@ let questions = [
  * Randomises the order that the questions are displayed from the questions array
  */
 function randomiseQuestions() {
-    let questionPool = questions.length;
-    let random = Math.floor(Math.random() * questionPool);
-    currentQuestion = questions[`${random}`];
+    let questionPool = questions.length; // variable is equal to amount of questions in array
+    let random = Math.floor(Math.random() * questionPool); // randomly generates a number between 0 and amount of remaining questions 
+    currentQuestion = questions[`${random}`]; // randomly selects an index number to pick an question set (object) from 
 }
 
 /**
@@ -237,10 +237,10 @@ function quizProgress() {
 
 /**
  * Removes the current question from the questions array and resets
- * relavant variables for the next question
+ * relavant variables for the next iteration/question
  */
  function removeQuestion() {
-    let removeQ = questions.indexOf(currentQuestion);
+    let removeQ = questions.indexOf(currentQuestion); //
     questions.splice(removeQ,1);
 
     currentAnswer = "";
@@ -262,7 +262,7 @@ function quizProgress() {
 }
 
 /**
- * Compares the question number to the total questions and calls functions to display the next
+ * Compares the current question number to the total questions and calls functions to display the next
  * question or end the quiz and move to the score page
  */
  function nextQuestion() {
@@ -276,8 +276,8 @@ function quizProgress() {
 }
 
 /**
- * Listens for user clicks on each of the four options displayed
- * and then calls the appropriate functions if the users choice was correct
+ * Listens for user clicks on each of the four element options displayed
+ * and then calls the appropriate functions depending if the users choice was correct
  * or incorrect
  */
 function checkAnswer() {
@@ -301,7 +301,7 @@ function checkAnswer() {
 }
 
 /**
- * Starts the game by resetting the score and question number and
+ * Starts the game by resetting the score, question number
  * then starts the loop of displaying new questions to the user
  */
 function runGame() {
