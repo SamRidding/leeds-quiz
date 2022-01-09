@@ -211,6 +211,13 @@ h1 {
         font-size: 1.4rem;
     }
 
+    /* Score Page */
+
+    #final-score {
+        margin: 0rem 1rem;
+        font-family: 'Oxanium', cursive;
+    }
+
 }
 
 /* ------------------------------------------- Tablet Screens */
