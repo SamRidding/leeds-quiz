@@ -1,6 +1,6 @@
 # Leeds United Quiz
 
-This is a quiz on Leeds United FC, which is aimed at Leeds fans and will allow them to test their knowledge on the club. Due to the nature of the questions it is more likely to be suited to young adults or older.
+This is a quiz on Leeds United FC, and so the target audience are Leeds fans. The quiz will allow them to test their knowledge on the club. Due to the nature of the questions it is more likely to be suited to young adults or older.
 
 Live Link: https://vfg-95.github.io/leeds-quiz/
 
