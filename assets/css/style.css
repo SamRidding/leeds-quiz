@@ -13,6 +13,7 @@ h1 {
     font-size: 4rem;
     margin-bottom: 2rem;
     color: #125eaa;
+    padding: 0.4rem 1rem;
 }
 
 /* ------------------------------------------- Homepage */
@@ -61,10 +62,11 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 2rem 0;
 }
 
 #score-display {
-    padding: 2rem;
+    margin: 2rem;
     text-align: center;
 }
 
@@ -107,6 +109,14 @@ h1 {
     padding: 0.8rem;
 }
 
+.option-ltr {
+    position: absolute;
+}
+
+.option-text {
+    margin: 0 auto;
+}
+
 .option:hover {
     color: #FFF300;
     transition: 200ms;
@@ -130,6 +140,8 @@ h1 {
     font-family: 'Oxanium', cursive;
     display: none;
 }
+
+/* Score Page */
 
 #final-score {
     margin: 2rem 1rem 0 1rem;
@@ -215,3 +227,43 @@ h1 {
     
 }
 
+/* ------------------------------------------- Tablet Screens */
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 3.6rem;
+        margin: 0rem 1rem 1rem 1rem ;
+    }
+
+    /* Home Page */
+
+    #badge {
+        width: 30%;
+        height: auto;
+        margin: 2rem;
+    }
+
+    /* Quiz Page */
+
+    .head {
+        margin: 2rem 1rem 0 1rem;
+    }
+
+    .option {
+        width: 32rem;
+    }
+
+    #progress {
+        margin-top: 1rem;
+    }
+
+    #progress h2 {
+        margin-bottom: 1rem;
+    }
+
+    /* Score Page */
+
+    #finish-quote {
+        font-size: 2.6rem;
+    }
+}
