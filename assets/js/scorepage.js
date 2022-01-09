@@ -1,6 +1,6 @@
-const finalScore = localStorage.getItem('finalScore')
+const finalScore = localStorage.getItem('finalScore');
 
-document.getElementById('final-score').innerText = `You Scored ${finalScore} / 20` // Displays final score to user
+document.getElementById('final-score').innerText = `You Scored ${finalScore} / 20`; // Displays final score to user
 
 let endQuote = document.getElementById('finish-quote');
 
@@ -18,4 +18,3 @@ if (finalScore <= 5) {
 } else if (finalScore == 20) {
     endQuote.innerText = "Bielsa level knowledge, we are not worthy";
 }
-

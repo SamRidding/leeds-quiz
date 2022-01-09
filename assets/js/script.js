@@ -3,18 +3,17 @@ const question = document.getElementById('question');
 const options = document.getElementsByClassName('option');
 const progressValue = document.getElementById('progressValue');
 const scoreValue = document.getElementById('score');
-const barProgress = document.getElementById('barProgress');
 const answerFeedback = document.getElementById('answer-feedback');
 
 /* Score & Question Variables */
 const totalQuestions = 20;
-let score = 0
-let currentQuestion, currentAnswer, questionNumber, availableQuestions;
+let score = 0;
+let currentQuestion, currentAnswer, questionNumber;
 
 /* Add event listener to check DOM content has loaded before quiz starts */
 document.addEventListener('DOMContentLoaded', function() {
     runGame();     
-})
+});
 
 /* Quiz Questions */
 let questions = [
@@ -178,7 +177,7 @@ let questions = [
         option4: 'Blackburn',
         answer: 'Bolton',
     },
-]
+];
 
 /**
  * Randomises the order that the questions are displayed from the questions array
@@ -247,7 +246,7 @@ function quizProgress() {
 
     answerFeedback.style.display = 'none';
 
-    progressValue.style.display = ''
+    progressValue.style.display = '';
 
     answerFeedback.innerText = ``;
 }
