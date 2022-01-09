@@ -23,6 +23,14 @@ Live Link: https://vfg-95.github.io/leeds-quiz/
     5. [Quiz Progress](#quiz-progress)
     6. [Score Page](#score-page)
     7. [Features To Implement](#features-to-implement)
+4. [Testing](#testing)
+    1. [Function Testing](#function-testing)
+    2. [Lighthouse Testing](#lighthouse-testing)
+    3. [Validators](#validators)
+    4. [Bugs](#bugs)
+5. [Deployment](#deployment)
+6. [Credits](#credits)
+7. [Media](#media)
 
 
 ## Goals
@@ -54,7 +62,7 @@ The colour scheme was very easy to decide on as I matched it to kit/badge colour
 
 ### Fonts
 
-I used two google fonts for the site, 'Ubuntu' was the default font used on the quiz name, play & home buttons, and the questions and answers themsleves. I then used 'Oxanium' for anything relating to the score, progress or answer feedback.
+I used two google fonts for the site, 'Ubuntu' was the default font used on the quiz name, play & home buttons, and the questions and answers themseleves. I then used 'Oxanium' for anything relating to the score, progress or answer feedback.
 
 ### Wireframe
 
@@ -72,7 +80,7 @@ The home page clearly states what the site is for and allows the user to start t
 ![homepage](./assets/images/homepage.png)
 
 ### Q&A Section
-The main feature of the quiz is the Q&A section which provdes the user with the questions and 4 interactive options for the user to choose from and complete the quiz. Users will instinctively click/press on the options to choose their answer. 
+The main feature of the quiz is the Q&A section which provides the user with the questions and 4 interactive options for the user to choose from and complete the quiz. Users will instinctively click/press on the options to choose their answer. 
 
 ![colourscheme](./assets/images/qanda.png)
 
@@ -101,6 +109,119 @@ Once the user finishes they are taken to the score page which tells them their f
 ### Features To Implement
 
 I was going to include a scoreboard (you can see this is commented out in the index.html file) to allow users to save their name and score, however I realised that as the site only makes use of local storage users on other devices/browsers would not actually see one another scores and so this is something which can be done with future development.
+
+## Testing
+
+I tested the sites responsiveness using Chrome dev tools and also on my own iPhone XR, MacBook & iPad:
+
+**Mobile:**
+
+-   Moto G4 (360x640)
+-   Galaxy S5 (360x640)
+-   Pixel 2 (411x731)
+-   Pixel 2 XL (411x823)
+-   iPhone 5/SE (320x568)
+-   iPhone 6/7/8 (375x667)
+-   iPhone 6/7/8 Plus (414x736)
+-   iPhone X (375x812)
+-   iPad (768x1024)
+-   iPad Pro (1024x1366)
+
+**Browsers:**
+
+-   Chrome
+-   Mozilla Firefox
+-   Safari
+-   Edge
+
+### Function Testing
+
+I tested the site was functioning as expected using my own devices and the browsers specified in the above section. The following functionality was tested for each:
+
+- Play Button - tested that the play button directed through to the quiz page
+- Option Buttons - tested that the option buttons responded to clicks and taps
+- Increment Score - tested that the score properly increased when an answer was correct
+- Quiz Progress - tested that the question number increased as expected whilst progressing through the quiz
+- Answer Feedback - tested that when an option was clicked that the correct or incorrect answer feedback appeared
+- Final Score - tested that the final score was pushed through to the score page correctly once the quiz was finished
+- Final Quote - tested that the quote which appears on the score page corresponded to the final score
+- Home Button - tested that the home button takes you back to the home page, and that the quiz can then be properly restarted
+
+I used google sheets to keep a record of each device and browser as I went through the testing process, see example below for my iPhone XR:
+
+![iphonexrtesting](./assets/images/iphonexrtesting.png)
+
+### Lighthouse Testing
+
+I got this result for desktop
+
+![lighthousedesktop](./assets/images/lighthousedesktop.png)
+
+and the following result for mobile
+
+![lighthousemobile](./assets/images/lighthousemobile.png)
+
+### Validators
+
+W3 HTML Validator:
+
+![htmlvalid](./assets/images/htmlvalid.png)
+
+W3 CSS Validator:
+
+![cssvalid](./assets/images/cssvalid.png)
+
+JS Hint Validator:
+
+![jsvalid](./assets/images/jsvalid.png)
+
+I have not addressed the JavaScript warning as I believe this has not been covered on the course yet.
+
+### Bugs
+
+I solved the following bug where by the pseudo :hover class on the quiz options and buttons turned the font colour yellow, on phones and tablets this meant that the colour stayed yellow when the next question appeared:
+
+![bug1](./assets/images/bug1.png)
+
+This was soved by moving the :hover classes to a media query which only targets laptop or desktop size screens:
+
+```
+@media only screen and (min-width: 1025px) {
+
+    /* Home Page */
+
+    .button:hover {
+        color: #FFF300;
+        transition: 200ms;
+        transform: scale(1.02);
+        cursor: pointer;
+    }
+
+    /* Quiz Page */
+
+    .option:hover {
+        color: #FFF300;
+        transition: 200ms;
+        cursor: pointer;
+    }
+```
+
+## Deployment
+
+    -   The site was deployed to GitHub pages. The steps to deploy are as follows:
+    -   In the GitHub repository, navigate to the Settings tab
+    -   From the source section drop-down menu, select the Master Branch
+    -   Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found here - https://vfg-95.github.io/leeds-quiz/
+
+## Credits
+
+- I took inspiration from the following YouTube [tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=2939s)
+
+## Media
+
+- The club crest is a trade mark of Leeds United Football Club and I have contacted them for permission to display this on the quiz.
 
 
 
