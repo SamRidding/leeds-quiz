@@ -208,10 +208,10 @@ This was soved by moving the :hover classes to a media query which only targets 
 
 ## Deployment
 
-    -   The site was deployed to GitHub pages. The steps to deploy are as follows:
-    -   In the GitHub repository, navigate to the Settings tab
-    -   From the source section drop-down menu, select the Master Branch
-    -   Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+    - in the GitHub repository, navigate to the settings tab
+    - From the source section drop-down menu, select the Master Branch
+    - Once the master branch has been selected, the page provides the link to the completed website
 
 The live link can be found here - https://vfg-95.github.io/leeds-quiz/
 
