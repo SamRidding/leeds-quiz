@@ -236,13 +236,6 @@ h1 {
         margin: 2rem;
     }
 
-    .button:hover {
-        color: #125eaa;
-        transition: 0;
-        transform: 0;
-        cursor: none;
-    }
-
     /* Quiz Page */
 
     .head {
