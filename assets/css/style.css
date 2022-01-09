@@ -134,6 +134,7 @@ h1 {
 
 #final-score {
     margin: 2rem 1rem 0 1rem;
+    font-family: 'Oxanium', cursive;
 }
 
 #finish-quote {
@@ -202,10 +203,6 @@ h1 {
         width: 20rem;
     }
 
-    #progress {
-        margin-top: 1rem;
-    }
-
     #progress h2 {
         font-size: 1.4rem;
     }
@@ -251,10 +248,6 @@ h1 {
 
     #progress {
         margin-top: 1rem;
-    }
-
-    #progress h2 {
-        margin-bottom: 1rem;
     }
 
     /* Score Page */
